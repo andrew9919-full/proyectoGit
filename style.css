@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* MODO CLARO/OSCURO VARIABLES */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --nav-bg: #000000;
+  --nav-text: #ffffff;
+}
+
+body.dark-mode {
+  --bg: #000000;
+  --text: #ffffff;
+  --nav-bg: #ffffff;
+  --nav-text: #000000;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+}
+
+.navbar nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar nav a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color .3s;
+}
+
+.navbar nav a:hover {
+  color: gray;
+}
+
+.navbar .icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#modeToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--nav-text);
+}
+
+/* VIDEO SCROLL */
+.video-scroll {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#scrollVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-text {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  top: 40%;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+/* PRODUCTOS */
+.productos {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.productos h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform .3s;
+}
+
+.producto img:hover {
+  transform: scale(1.05);
+}
+
+/* BANNERS */
+.banner {
+  position: relative;
+  margin: 50px 0;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+}
+
+.texto-banner {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  color: white;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  line-height: 1.3;
+  font-weight: 500;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* pie de pagina */
+.piedepagina {
+  background: #eee;
+  text-align: center;
+  padding: 40px 20px;
+  transition: background 0.3s;
+}
+
+body.dark-mode .piedepagina {
+  background: #111;
+}
+
+.piedepagina .social {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.piedepagina .social a {
+  font-size: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+#oro-valor {
+  background-color: var(--rojo);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+}
